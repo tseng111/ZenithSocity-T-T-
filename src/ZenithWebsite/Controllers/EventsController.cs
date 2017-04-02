@@ -48,7 +48,7 @@ namespace ZenithWebsite.Controllers
         // GET: Events/Create
         public IActionResult Create()
         {
-            ViewData["ActivityId"] = new SelectList(_context.Activities, "ActivityId", "ActivityId");
+            ViewData["ActivityId"] = new SelectList(_context.Activities, "ActivityId", "ActivityDescription");
             return View();
         }
 
@@ -82,7 +82,7 @@ namespace ZenithWebsite.Controllers
             {
                 return NotFound();
             }
-            ViewData["ActivityId"] = new SelectList(_context.Activities, "ActivityId", "ActivityId", @event.ActivityId);
+            ViewData["ActivityId"] = new SelectList(_context.Activities , "ActivityId", "ActivityDescription");
             return View(@event);
         }
 

@@ -44,7 +44,11 @@
         "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
             "version": "1.0.0-preview2-final",
             "type": "build"
-        }
+        },
+        "AspNet.Security.OAuth.Validation": "1.0.0-*",
+        "OpenIddict": "1.0.0-*",
+        "OpenIddict.EntityFrameworkCore": "1.0.0-*",
+        "OpenIddict.Mvc": "1.0.0-*",
     },
 
   "tools": {

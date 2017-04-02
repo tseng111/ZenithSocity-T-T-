@@ -64,8 +64,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 1,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Senior’s  Golf Tournament"),
-                         EventFrom = new DateTime(2016, 4, 4, 8, 30, 0),
-                         EventTo = new DateTime(2016, 4, 4, 10, 30, 0),
+                         EventFrom = new DateTime(2017, 4, 4, 8, 30, 0),
+                         EventTo = new DateTime(2017, 4, 4, 10, 30, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -76,8 +76,8 @@ namespace ZenithWebsite.Models
                     {
                         ActivityId = 2,
                         Activity = db.Activities.First(a => a.ActivityDescription == "Leadership General Assembly Meeting"),
-                        EventFrom = new DateTime(2016, 4, 5, 8, 30, 0),
-                        EventTo = new DateTime(2016, 4, 5, 10, 30, 0),
+                        EventFrom = new DateTime(2017, 4, 5, 8, 30, 0),
+                        EventTo = new DateTime(2017, 4, 5, 10, 30, 0),
                         CreatedBy = "a",
                         CreationDate = DateTime.Now,
                         IsActive = true
@@ -88,8 +88,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 3,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Youth Bowling Tournament"),
-                         EventFrom = new DateTime(2016, 4, 7, 17, 30, 0),
-                         EventTo = new DateTime(2016, 4, 7, 19, 15, 0),
+                         EventFrom = new DateTime(2017, 4, 7, 17, 30, 0),
+                         EventTo = new DateTime(2017, 4, 7, 19, 15, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -100,8 +100,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 4,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Young Ladies Cooking Lessons"),
-                         EventFrom = new DateTime(2016, 4, 7, 19, 0, 0),
-                         EventTo = new DateTime(2016, 4, 7, 20, 0, 0),
+                         EventFrom = new DateTime(2017, 4, 7, 19, 0, 0),
+                         EventTo = new DateTime(2017, 4, 7, 20, 0, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -112,8 +112,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 5,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Youth Craft Lessons"),
-                         EventFrom = new DateTime(2016, 4, 8, 8, 30, 0),
-                         EventTo = new DateTime(2016, 4, 8, 10, 30, 0),
+                         EventFrom = new DateTime(2017, 4, 8, 8, 30, 0),
+                         EventTo = new DateTime(2017, 4, 8, 10, 30, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -124,8 +124,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 6,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Youth Choir Practice"),
-                         EventFrom = new DateTime(2016, 4, 8, 10, 30, 0),
-                         EventTo = new DateTime(2016, 4, 8, 12, 0, 0),
+                         EventFrom = new DateTime(2017, 4, 8, 10, 30, 0),
+                         EventTo = new DateTime(2017, 4, 8, 12, 0, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -136,8 +136,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 7,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Lunch"),
-                         EventFrom = new DateTime(2016, 4, 8, 12, 0, 0),
-                         EventTo = new DateTime(2016, 4, 8, 13, 30, 0),
+                         EventFrom = new DateTime(2017, 4, 8, 12, 0, 0),
+                         EventTo = new DateTime(2017, 4, 8, 13, 30, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -148,8 +148,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 8,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Pancake Breakfast"),
-                         EventFrom = new DateTime(2016, 4, 9, 7, 30, 0),
-                         EventTo = new DateTime(2016, 4, 9, 8, 30, 0),
+                         EventFrom = new DateTime(2017, 4, 9, 7, 30, 0),
+                         EventTo = new DateTime(2017, 4, 9, 8, 30, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -160,8 +160,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 9,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Youth Swimming Lessons"),
-                         EventFrom = new DateTime(2016, 4, 9, 8, 30, 0),
-                         EventTo = new DateTime(2016, 4, 9, 10, 30, 0),
+                         EventFrom = new DateTime(2017, 4, 9, 8, 30, 0),
+                         EventTo = new DateTime(2017, 4, 9, 10, 30, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -172,8 +172,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 10,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Parent Swimming Exercise"),
-                         EventFrom = new DateTime(2016, 4, 9, 8, 30, 0),
-                         EventTo = new DateTime(2016, 4, 9, 10, 30, 0),
+                         EventFrom = new DateTime(2017, 4, 9, 8, 30, 0),
+                         EventTo = new DateTime(2017, 4, 9, 10, 30, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -184,8 +184,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 11,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Bingo Tournament"),
-                         EventFrom = new DateTime(2016, 4, 9, 10, 30, 0),
-                         EventTo = new DateTime(2016, 4, 9, 12, 0, 0),
+                         EventFrom = new DateTime(2017, 4, 9, 10, 30, 0),
+                         EventTo = new DateTime(2017, 4, 9, 12, 0, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -196,8 +196,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 12,
                          Activity = db.Activities.First(a => a.ActivityDescription == "BBQ Lunch"),
-                         EventFrom = new DateTime(2016, 4, 9, 12, 0, 0),
-                         EventTo = new DateTime(2016, 4, 9, 13, 0, 0),
+                         EventFrom = new DateTime(2017, 4, 9, 12, 0, 0),
+                         EventTo = new DateTime(2017, 4, 9, 13, 0, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true
@@ -208,8 +208,8 @@ namespace ZenithWebsite.Models
                      {
                          ActivityId = 13,
                          Activity = db.Activities.First(a => a.ActivityDescription == "Garage Sale"),
-                         EventFrom = new DateTime(2016, 4, 9, 13, 0, 0),
-                         EventTo = new DateTime(2016, 4, 9, 18, 0, 0),
+                         EventFrom = new DateTime(2017, 4, 9, 13, 0, 0),
+                         EventTo = new DateTime(2017, 4, 9, 18, 0, 0),
                          CreatedBy = "a",
                          CreationDate = DateTime.Now,
                          IsActive = true

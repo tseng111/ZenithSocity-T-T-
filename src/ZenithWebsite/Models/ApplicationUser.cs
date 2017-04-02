@@ -12,9 +12,11 @@ namespace ZenithWebsite.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
+        [Display(Name = "Username")]
         public override string UserName { get; set; }
 
         [Required]
+        [Display(Name = "Email")]
         public override string Email { get; set; }
     }
 }

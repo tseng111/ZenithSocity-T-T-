@@ -22,7 +22,7 @@ namespace ZenithWebsite.Controllers
         }
 
 
-        public async Task<ActionResult> Index()
+         public async Task<IActionResult> Index()
         {
             currentUser = await _userManager.GetUserAsync(HttpContext.User);
 
@@ -30,9 +30,9 @@ namespace ZenithWebsite.Controllers
             DateTime start = today.Date.AddDays(-(int)today.DayOfWeek + 1);
             DateTime end = start.AddDays(7);
 
-            var events = _context.Events.Where(e => e.EventFrom >= start & e.EventTo <= end).ToList();
+            var events = _context.Events.Where(e => e.EventFrom >= start && e.EventTo <= end).ToList();
 
-            if(currentUser != null)
+            if(currentUser == null)
             {
                 events.RemoveAll(e => e.IsActive == false);
             }
@@ -42,7 +42,7 @@ namespace ZenithWebsite.Controllers
                 eventItem.Activity = _context.Activities.FirstOrDefault(a => a.ActivityId == eventItem.ActivityId);
             }
 
-            return View();
+            return View(events);
         }
     }
 }
