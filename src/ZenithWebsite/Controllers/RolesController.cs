@@ -49,7 +49,6 @@ namespace ZenithWebsite.Controllers
         // GET: Roles/Create
         public IActionResult Create()
         {
-            ViewData["Id"] = new SelectList(_context.Roles, "Id", "Name");
             return View();
         }
 
@@ -62,11 +61,10 @@ namespace ZenithWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
-                //_context.Add(@event);
                 await _roleManager.CreateAsync(new IdentityRole(@event.Name));
                 return RedirectToAction("Index");
             }
-            ViewData["Id"] = new SelectList(_context.Roles, "Id", "Name", @event.Id);
+
             return View(@event);
         }
 
@@ -145,7 +143,7 @@ namespace ZenithWebsite.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EventExists(id))
+                    if (!RoleExists(id))
                     {
                         return NotFound();
                     }
@@ -182,8 +180,8 @@ namespace ZenithWebsite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            //Check if role being deleted is the Admin role
-            if (_context.Roles.Where(q => q.Name == "Admin").First().Id == id)
+            //Don't delete if admin
+            if (_context.Roles.Where(role => role.Name == "Admin").First().Id == id)
             {
                 return RedirectToAction("Index");
             }
@@ -194,9 +192,9 @@ namespace ZenithWebsite.Controllers
             return RedirectToAction("Index");
         }
 
-        private bool EventExists(string id)
+        private bool RoleExists(string id)
         {
-            return _context.Roles.Any(e => e.Id == id);
+            return _context.Roles.Any(role => role.Id == id);
         }
     }
 }

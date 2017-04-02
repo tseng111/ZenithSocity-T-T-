@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    ViewData["UserExist"] = "No";
 }
 
 <h2>Index</h2>
@@ -46,17 +47,28 @@
             </td>
             @foreach (var role in ViewData["Roles"] as IList<string>)
             {
-                @if ((ViewData[item.UserName + "Roles"] as List<string>).Contains(item.UserName))
-                {
-                    <td>Do This</td>
-                }
-                else
-                {
-                    <td>Do That</td>
-                }
-
+                <td>
+                    @foreach (var user in ViewData[role] as IList<ApplicationUser>)
+                    {
+                        if (user.UserName == item.UserName)
+                        {
+                            ViewData["UserExist"] = "Yes";
+                        }
+                    }
+                    @if(ViewData["UserExist"].Equals("Yes"))
+                    {
+                        <p>Yes</p>
+                        <a asp-action="RemoveFromRole" asp-route-username="@item.UserName" asp-route-role="@role">Remove from Role</a>
+                    }
+                    else
+                    {
+                        <p>No</p>
+                        <a asp-action="AddToRole" asp-route-username="@item.UserName" asp-route-role="@role">Add to Role</a>
+                    }
+                </td>
+                ViewData["UserExist"] = "No";
             }
-        </tr>
+</tr>
 }
     </tbody>
 </table>
