@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ZenithWebsite.Controllers.HomeController.RenderedView>
+﻿
 
 @{
     ViewData["Title"] = "Home Page";
@@ -6,25 +6,4 @@
 
 <div class="Title">
     <h1>Zenith Society</h1>
-</div>
-<div class="row">
-    <h4>Events Schedule</h4>
-    <div class="table table-striped table-responsive">
-        <table class="table">
-            @foreach (var i in Model.GroupBy(j => j.Events.EventFrom.ToString()))
-            {
-                <tr class="active">
-                    <td colspan="2">@i.Key.ToString()</td>
-                </tr>
-
-                foreach (var k in i)
-                {
-                    <tr>
-                        <td>@k.Events.EventFrom.ToString() to @k.Events.EventTo.ToString()</td>
-                        <td>@k.Activities.ActivityDescription</td>
-                    </tr>
-                }
-            }
-        </table>
-    </div>
 </div>
