@@ -231,6 +231,7 @@ C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\Zen
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\AccountController.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\ActivitiesAPIController.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\ActivitiesController.cs
+C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\ApplicationUsersAPIController.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\ApplicationUsersController.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\EventsAPIController.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\EventsController.cs
@@ -238,8 +239,8 @@ C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\Zen
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\ManageController.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Controllers\RolesController.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Data\ApplicationDbContext.cs
-C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Migrations\20170331144346_FirstMigration.cs
-C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Migrations\20170331144346_FirstMigration.Designer.cs
+C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Migrations\20170402062442_FirstMigration.cs
+C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Migrations\20170402062442_FirstMigration.Designer.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Models\Activity.cs
 C:\Users\Student\Desktop\Jeff\4870\Assignment\Assignment02\ZenithSociety\src\ZenithWebsite\Models\ApplicationUser.cs

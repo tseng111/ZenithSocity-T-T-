@@ -8,7 +8,7 @@ using ZenithWebsite.Data;
 namespace ZenithWebsite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170331144346_FirstMigration")]
+    [Migration("20170402062442_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -129,7 +129,8 @@ namespace ZenithWebsite.Migrations
                     b.Property<int>("ActivityId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ActivityDescription");
+                    b.Property<string>("ActivityDescription")
+                        .IsRequired();
 
                     b.Property<DateTime>("CreationDate");
 

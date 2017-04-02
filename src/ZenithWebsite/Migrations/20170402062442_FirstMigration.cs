@@ -43,7 +43,7 @@ namespace ZenithWebsite.Migrations
                 {
                     ActivityId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ActivityDescription = table.Column<string>(nullable: true),
+                    ActivityDescription = table.Column<string>(nullable: false),
                     CreationDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>

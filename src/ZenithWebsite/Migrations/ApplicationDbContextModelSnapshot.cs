@@ -128,7 +128,8 @@ namespace ZenithWebsite.Migrations
                     b.Property<int>("ActivityId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ActivityDescription");
+                    b.Property<string>("ActivityDescription")
+                        .IsRequired();
 
                     b.Property<DateTime>("CreationDate");
 

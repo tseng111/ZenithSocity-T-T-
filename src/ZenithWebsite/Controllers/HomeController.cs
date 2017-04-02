@@ -2,33 +2,46 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ZenithWebsite.Data;
+using ZenithWebsite.Models;
 
 namespace ZenithWebsite.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private ApplicationUser currentUser;
+
+        public HomeController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
-            return View();
+            _context = context;
+            _userManager = userManager;
         }
 
-        public IActionResult About()
+
+        public async Task<ActionResult> Index()
         {
-            ViewData["Message"] = "Your application description page.";
+            currentUser = await _userManager.GetUserAsync(HttpContext.User);
 
-            return View();
-        }
+            DateTime today = DateTime.Today;
+            DateTime start = today.Date.AddDays(-(int)today.DayOfWeek + 1);
+            DateTime end = start.AddDays(7);
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
+            var events = _context.Events.Where(e => e.EventFrom >= start & e.EventTo <= end).ToList();
 
-            return View();
-        }
+            if(currentUser != null)
+            {
+                events.RemoveAll(e => e.IsActive == false);
+            }
 
-        public IActionResult Error()
-        {
+            foreach(var eventItem in events)
+            {
+                eventItem.Activity = _context.Activities.FirstOrDefault(a => a.ActivityId == eventItem.ActivityId);
+            }
+
             return View();
         }
     }
