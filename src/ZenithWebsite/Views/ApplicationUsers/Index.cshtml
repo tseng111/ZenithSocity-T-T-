@@ -57,12 +57,10 @@
                     }
                     @if(ViewData["UserExist"].Equals("Yes"))
                     {
-                        <p>Yes</p>
                         <a asp-action="RemoveFromRole" asp-route-username="@item.UserName" asp-route-role="@role">Remove from Role</a>
                     }
                     else
                     {
-                        <p>No</p>
                         <a asp-action="AddToRole" asp-route-username="@item.UserName" asp-route-role="@role">Add to Role</a>
                     }
                 </td>

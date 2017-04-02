@@ -24,7 +24,7 @@ namespace ZenithWebsite.Controllers
         }
 
         // GET: Roles
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View(_context.Roles.ToList());
         }
