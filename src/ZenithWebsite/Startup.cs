@@ -77,6 +77,15 @@ namespace ZenithWebsite
                 options.DisableHttpsRequirement();
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
+
             services.AddMvc();
 
             // Add application services.
@@ -104,7 +113,7 @@ namespace ZenithWebsite
             app.UseStaticFiles();
 
             app.UseIdentity();
-
+            app.UseCors("CorsPolicy");
             app.UseOAuthValidation();
             app.UseOpenIddict();
 
