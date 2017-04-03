@@ -16,6 +16,9 @@
                 @Html.DisplayNameFor(model => model.CreatedBy)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Activity.ActivityDescription)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.CreationDate)
             </th>
             <th>
@@ -35,6 +38,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activity.ActivityDescription)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CreationDate)

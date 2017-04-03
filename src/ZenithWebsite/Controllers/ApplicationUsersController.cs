@@ -133,8 +133,15 @@ namespace ZenithWebsite.Controllers
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var applicationUser = await _context.ApplicationUser.SingleOrDefaultAsync(m => m.Id == id);
-            _context.ApplicationUser.Remove(applicationUser);
-            await _context.SaveChangesAsync();
+            if(applicationUser.UserName == "a")
+            {
+                return RedirectToAction("Index");
+            }else
+            {
+                _context.ApplicationUser.Remove(applicationUser);
+                await _context.SaveChangesAsync();
+            }
+            
             return RedirectToAction("Index");
         }
 

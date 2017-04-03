@@ -9,17 +9,23 @@
 <div class="row">
     <div class="col-md-12">
         <table class="table">
-            @foreach (var i in Model.GroupBy(j => j.EventFrom.ToString()))
+            @foreach (var eventItem in Model.GroupBy(e => e.EventFrom.Date).Select(e => e.FirstOrDefault()).ToList())
             {
-                <tr class="active">
-                    <td colspan="2">@i.Key.ToString()</td>
+                <tr class="active" style="font-weight:bold">
+                    <td>
+                        @eventItem.EventFrom.Date.ToString("D")
+                    </td>
+                    <td></td>
                 </tr>
-
-                foreach (var k in i)
+                foreach (var item in Model.Where(e => e.EventFrom.Date.ToString() == eventItem.EventFrom.Date.ToString()))
                 {
                     <tr>
-                        <td>@k.EventFrom.ToString() to @k.EventTo.ToString()</td>
-                        <td>@k.Activity.ActivityDescription</td>
+                        <td>
+                            @item.EventFrom.ToString("hh:mm tt") to @item.EventTo.ToString("hh:mm tt")
+                        </td>
+                        <td>
+                            @item.Activity.ActivityDescription
+                        </td>
                     </tr>
                 }
             }
