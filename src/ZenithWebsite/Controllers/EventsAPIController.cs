@@ -11,7 +11,7 @@ using ZenithWebsite.Models;
 namespace ZenithWebsite.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Events1")]
+    [Route("api/Events")]
     public class EventsAPIController : Controller
     {
         private readonly ApplicationDbContext _context;
