@@ -103,10 +103,8 @@ namespace ZenithWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _userManager.CreateAsync(applicationUser, applicationUser.UserName);
                 _context.Add(applicationUser);
                 await _context.SaveChangesAsync();
-                
                 return RedirectToAction("Index");
             }
             return View(applicationUser);
@@ -135,7 +133,6 @@ namespace ZenithWebsite.Controllers
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var applicationUser = await _context.ApplicationUser.SingleOrDefaultAsync(m => m.Id == id);
-            //await _userManager.DeleteAsync(applicationUser);
             _context.ApplicationUser.Remove(applicationUser);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
