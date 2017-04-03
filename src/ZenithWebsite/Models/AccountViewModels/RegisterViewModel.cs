@@ -9,7 +9,6 @@ namespace ZenithWebsite.Models.AccountViewModels
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "UserName")]
         public string UserName { get; set; }
 
         [EmailAddress]
