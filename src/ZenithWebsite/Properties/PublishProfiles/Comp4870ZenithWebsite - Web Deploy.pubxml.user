@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA64nuzPYa906iAJRVgsppkwAAAAACAAAAAAAQZgAAAAEAACAAAACDzkYh2TrFMT+PLG1s0Kcr2dIgH4eo/oluae7fO0YXWgAAAAAOgAAAAAIAACAAAABzkAstXuwTrdgwkwehmcTiFTZfjrsTCv1WjFLIX/uCV4AAAACkBZcqVF3rQTQXBkdfUfv9bAAbHnDIqoO0QNIZuGy1pToSfPOnhz37463v321I5/jUut1DqB4uHoGiB2Ejat4t1x2xs9FZZbszjh6xzKwMuWRSWt7Xv6H0d1Zo85KevvBNBWdm1H7qjsrFXRBZGnvXfof6md3BnCUCZqUOZQaRyEAAAADbkEYmsbts6vdhAXrDR1QRtMUkjuzE2MJDt/TsfJtlycW6N7XREeTBosQgmqTnualHWTuq64AXvR5dbDI5Sy6L</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=(localdb)\mssqllocaldb;Database=aspnet-ZenithWebsite-62c87f83-23f3-4c40-934e-542c6d477a33;Trusted_Connection=True;MultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EfMigrations Include="ZenithWebsite.Data.ApplicationDbContext">
+      <Value>Server=(localdb)\mssqllocaldb;Database=aspnet-ZenithWebsite-62c87f83-23f3-4c40-934e-542c6d477a33;Trusted_Connection=True;MultipleActiveResultSets=true</Value>
+    </EfMigrations>
+  </ItemGroup>
+</Project>
